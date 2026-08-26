@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" role="img" aria-labelledby="title desc">
+  <title id="title">Bike Auckland logo placeholder</title>
+  <desc id="desc">Text-based placeholder logo for Bike Auckland.</desc>
+  <rect width="600" height="220" rx="24" fill="#ecfff9"/>
+  <circle cx="96" cy="110" r="44" fill="#1db8a6"/>
+  <circle cx="96" cy="110" r="19" fill="#ffffff"/>
+  <rect x="170" y="78" width="330" height="12" rx="6" fill="#17233b"/>
+  <text x="170" y="132" font-size="52" font-family="Arial, sans-serif" font-weight="700" fill="#17233b">Bike Auckland</text>
+</svg>

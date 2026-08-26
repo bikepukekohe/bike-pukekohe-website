@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" role="img" aria-labelledby="title desc">
+  <title id="title">Auckland Council logo placeholder</title>
+  <desc id="desc">Text-based placeholder logo for Auckland Council.</desc>
+  <rect width="600" height="220" rx="24" fill="#fff5e8"/>
+  <path d="M100 165 L140 50 L180 165 Z" fill="#ff7f41"/>
+  <circle cx="140" cy="50" r="15" fill="#ffd257"/>
+  <rect x="215" y="78" width="320" height="12" rx="6" fill="#17233b"/>
+  <text x="215" y="132" font-size="48" font-family="Arial, sans-serif" font-weight="700" fill="#17233b">Auckland Council</text>
+</svg>

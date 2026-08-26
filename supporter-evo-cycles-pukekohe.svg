@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" role="img" aria-labelledby="title desc">
+  <title id="title">Evo Cycles Pukekohe logo placeholder</title>
+  <desc id="desc">Text-based placeholder logo for Evo Cycles Pukekohe.</desc>
+  <rect width="600" height="220" rx="24" fill="#eef4ff"/>
+  <rect x="68" y="68" width="124" height="84" rx="14" fill="#17233b"/>
+  <text x="104" y="124" font-size="44" font-family="Arial, sans-serif" font-weight="700" fill="#ffffff">E</text>
+  <rect x="230" y="78" width="280" height="12" rx="6" fill="#17233b"/>
+  <text x="230" y="126" font-size="44" font-family="Arial, sans-serif" font-weight="700" fill="#17233b">Evo Cycles</text>
+  <text x="230" y="164" font-size="30" font-family="Arial, sans-serif" font-weight="600" fill="#40506d">Pukekohe</text>
+</svg>
