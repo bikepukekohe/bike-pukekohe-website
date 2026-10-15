@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -43,6 +43,7 @@
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#programmes">Programmes</a>
+          <a href="#gallery">Gallery</a>
           <a href="#events">Events</a>
           <a href="#get-involved">Get Involved</a>
           <a href="#contact" class="button button-small">Contact</a>
@@ -52,14 +53,24 @@
 
     <main id="main">
       <section class="hero section">
-        <div class="container hero-grid">
+        <div class="container">
+          <figure class="hero-team-photo reveal">
+            <img
+              src="Team.JPG"
+              alt="Bike Pukekohe team group photo"
+              class="team-photo"
+            />
+          </figure>
+        </div>
+
+        <div class="hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Community Charity Organisation</p>
+            <p class="eyebrow">Community Group</p>
             <h1>Helping Pukekohe ride safer, every day.</h1>
             <p>
-              We are a local charity championing confident, safe cycling for
-              tamariki, commuters, and whānau across Pukekohe and nearby
-              communities.
+              We are local volunteers who make cycling in Pukekohe safer, more
+              accessible and more enjoyable for people of all ages through
+              cycling activations, community events, and social encouragement.
             </p>
             <div class="hero-actions">
               <a href="#get-involved" class="button">Volunteer With Us</a>
@@ -76,7 +87,7 @@
             </div>
           </div>
 
-          <aside class="hero-card reveal delay-1" aria-label="Key outcomes">
+          <!-- <aside class="hero-card reveal delay-1" aria-label="Key outcomes">
             <h2>This month at a glance</h2>
             <ul>
               <li><strong>8</strong> school safety workshops delivered</li>
@@ -84,9 +95,58 @@
               <li><strong>3</strong> guided community rides hosted</li>
             </ul>
             <p class="tiny">Placeholder stats for initial site setup.</p>
-          </aside>
+          </aside> -->
         </div>
-        <div class="hero-glow" aria-hidden="true"></div>
+        <!-- <div class="hero-glow" aria-hidden="true"></div> -->
+      </section>
+
+      <section class="section" id="community-media">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Community Vibe</p>
+            <h2>Bike Pukekohe Social</h2>
+          </div>
+
+          <div class="video-wrap reveal delay-1">
+            <video controls preload="metadata" playsinline>
+              <source src="Bike Pukekohe Social.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Gallery</p>
+            <h2>Moments from our rides and workshops</h2>
+          </div>
+
+          <div class="photo-gallery">
+            <figure class="gallery-item reveal delay-1">
+              <img
+                src="Bike Mechanic Workshop.JPG"
+                alt="Bike mechanic workshop with community riders"
+                class="gallery-image"
+              />
+            </figure>
+            <figure class="gallery-item reveal delay-2">
+              <img
+                src="Scavenger Hunt1.JPG"
+                alt="Scavenger hunt group participating in cycling activities"
+                class="gallery-image"
+              />
+            </figure>
+            <figure class="gallery-item reveal delay-3">
+              <img
+                src="Scavenger Hunt2.JPG"
+                alt="Scavenger hunt route activity in Pukekohe"
+                class="gallery-image"
+              />
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="section" id="about">
@@ -102,7 +162,7 @@
         </div>
       </section>
 
-      <section class="section" id="programmes">
+      <!-- <section class="section" id="programmes">
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">What We Do</p>
@@ -111,6 +171,11 @@
 
           <div class="card-grid">
             <article class="card reveal delay-1">
+              <img
+                src="Bike Mechanic Workshop.JPG"
+                alt="Bike mechanic workshop session"
+                class="card-media"
+              />
               <h3>School Ride Ready</h3>
               <p>
                 Placeholder content for cycle safety sessions in local primary
@@ -118,6 +183,11 @@
               </p>
             </article>
             <article class="card reveal delay-2">
+              <img
+                src="Scavenger Hunt1.JPG"
+                alt="Scavenger hunt riders and community participants"
+                class="card-media"
+              />
               <h3>Helmet & Bike Checks</h3>
               <p>
                 Placeholder content for free basic safety checks and guidance
@@ -125,6 +195,11 @@
               </p>
             </article>
             <article class="card reveal delay-3">
+              <img
+                src="Scavenger Hunt2.JPG"
+                alt="Scavenger hunt activity in Pukekohe"
+                class="card-media"
+              />
               <h3>Commuter Confidence</h3>
               <p>
                 Placeholder content for adults returning to cycling and route
@@ -133,7 +208,7 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section" id="events">
         <div class="container">
@@ -158,22 +233,22 @@
           <div class="supporters-grid">
             <article class="supporter-card reveal delay-1">
               <img
-                src="supporter-bike-auckland.svg"
+                src="supporter-bike-auckland.png"
                 alt="Bike Auckland logo"
                 class="supporter-logo"
               />
             </article>
             <article class="supporter-card reveal delay-2">
               <img
-                src="supporter-auckland-council.svg"
+                src="supporter-auckland-council.png"
                 alt="Auckland Council logo"
                 class="supporter-logo"
               />
             </article>
             <article class="supporter-card reveal delay-3">
               <img
-                src="supporter-evo-cycles-pukekohe.svg"
-                alt="Evo Cycles Pukekohe logo"
+                src="supporter-franklin-local-board.png"
+                alt="Franklin Local Board logo"
                 class="supporter-logo"
               />
             </article>
@@ -181,7 +256,7 @@
         </div>
       </section>
 
-      <section class="section cta" id="get-involved">
+      <!-- <section class="section cta" id="get-involved">
         <div class="container cta-inner reveal">
           <div>
             <p class="eyebrow">Get Involved</p>
@@ -193,14 +268,14 @@
           </div>
           <a href="#contact" class="button">Support Our Work</a>
         </div>
-      </section>
+      </section> -->
 
       <section class="section" id="contact">
         <div class="container narrow reveal">
           <p class="eyebrow">Contact</p>
           <h2>Say hello</h2>
           <p>Email: hello@bikepukekohe.nz</p>
-          <p>Address: Pukekohe, Auckland, New Zealand (placeholder)</p>
+          <!-- <p>Address: Pukekohe, Auckland, New Zealand (placeholder)</p> -->
         </div>
       </section>
     </main>
@@ -236,7 +311,7 @@
             >Facebook</a
           >
           <a
-            href="https://www.instagram.com/bike_pukekohe/"
+            href="https://www.instagram.com/bikepukekohe/"
             target="_blank"
             rel="noopener noreferrer"
             >Instagram</a

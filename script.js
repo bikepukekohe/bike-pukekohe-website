@@ -4,7 +4,7 @@ const yearEl = document.querySelector("#year");
 const eventsListEl = document.querySelector("#events-list");
 
 const EVENTS_FEED_URL =
-  "https://script.google.com/macros/s/AKfycbzqrl8XMszdBPZka3Ax5qgrWZmHcNoXpcLlVmtoIlyRvsk5_f1QOsHfHOb47-EB5G3Exw/exec";
+  "https://script.google.com/macros/s/AKfycby9K4bTatimk_eW7_0rYoksA0F6Q-S5bpkoRbrj3GqO2hj9q-svCjqaZ_Icy_iftSMADg/exec";
 
 const fallbackEvents = [
   {
@@ -86,6 +86,48 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function toDateOnly(value) {
+  return new Date(value.getFullYear(), value.getMonth(), value.getDate());
+}
+
+function parseEventDate(value) {
+  if (!value) {
+    return null;
+  }
+
+  if (value instanceof Date && !Number.isNaN(value.getTime())) {
+    return toDateOnly(value);
+  }
+
+  if (typeof value === "string") {
+    const isoDateMatch = value.trim().match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (isoDateMatch) {
+      const [, year, month, day] = isoDateMatch;
+      return new Date(Number(year), Number(month) - 1, Number(day));
+    }
+  }
+
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    return null;
+  }
+
+  return toDateOnly(parsed);
+}
+
+function filterUpcomingEvents(events) {
+  const today = toDateOnly(new Date());
+
+  return events.filter((event) => {
+    const eventDate = parseEventDate(event.date);
+    if (!eventDate) {
+      return true;
+    }
+
+    return eventDate >= today;
+  });
+}
+
 function renderEvents(events) {
   if (!eventsListEl) {
     return;
@@ -133,7 +175,7 @@ function renderEvents(events) {
 
 async function fetchEvents() {
   if (!EVENTS_FEED_URL) {
-    renderEvents(fallbackEvents);
+    renderEvents(filterUpcomingEvents(fallbackEvents));
     return;
   }
 
@@ -150,10 +192,10 @@ async function fetchEvents() {
         ? payload.events
         : [];
 
-    renderEvents(events);
+    renderEvents(filterUpcomingEvents(events));
   } catch (error) {
     console.error("Unable to load events feed", error);
-    renderEvents(fallbackEvents);
+    renderEvents(filterUpcomingEvents(fallbackEvents));
   }
 }
 
